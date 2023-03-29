@@ -3,13 +3,20 @@ import Item from '../components/Common/Item';
 import { fetchItems } from '../reducks/items/operations';
 import { getItems } from '../reducks/items/selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import MainImage from '../assets/img/main-background.png';
+import MainImage from '../assets/img/sale_offer.png';
 import { fetchCarts } from '../reducks/carts/operations';
+import Carousel from './Car';
+import Grid from './Grid.jsx';
+
+
 
 const Home = () => {
     const selector = useSelector(state => state);
     const dispatch = useDispatch();
     const items = getItems(selector);
+
+
+
 
     useEffect(() => {
         dispatch(fetchItems());
@@ -22,18 +29,23 @@ const Home = () => {
     return (
         <>
             <section class="main-image">
-                <img src={MainImage} alt="main-image" />
-                <div class="text">
-                    <p>
-                        Cool Tees for <br />
-                        MEN & WOMEN
-                    </p>
-                    <hr />
+                <img src={MainImage} alt="main-img" />
+                <div className="shop-btn">
+                    <button className='shop-now' >Shop Now</button>
                 </div>
             </section>
+            
+            
+            <Carousel />
+        
+
+        
+            <Grid />
+
             <div className="product-heading">
-                <h2>Product-List</h2>
+                <h2 className='product-list'>Product-List</h2>
             </div>
+            
             <section className="item-container">
                 <div className="item-grid">
                     {items &&
@@ -44,6 +56,7 @@ const Home = () => {
                         ))}
                 </div>
             </section>
+
         </>
     );
 };

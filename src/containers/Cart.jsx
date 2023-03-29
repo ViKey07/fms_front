@@ -34,10 +34,12 @@ const Cart = () => {
                                 carts.map(cart => (
                                     <li>
                                         <CartItem
-                                            cartimg={cart.image}
+                                            // cartimg={cart.image}
                                             cart={cart.item}
                                             cartId={cart.id}
                                             key={cart.item.id}
+                                            // size={cart.item.size}
+                                            // colour={cart.item.color}
                                             quantity={cart.quantity}
                                         />
                                     </li>

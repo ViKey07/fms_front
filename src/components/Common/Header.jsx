@@ -3,7 +3,7 @@ import { signOut } from '../../reducks/users/operations';
 import { useDispatch } from 'react-redux';
 import { push } from 'connected-react-router';
 import cart from '../../assets/img/cart.svg';
-import logo from '../../assets/img/cooltees-logo.png';
+import logo from '../../assets/img/logo_black1.png';
 import user from '../../assets/img/user.svg';
 export default function Header() {
     const dispatch = useDispatch();
@@ -30,8 +30,16 @@ export default function Header() {
                         {' '}
                         <img src={logo} alt="logo" />
                     </a>
+
+                    
                 </div>
                 <nav>
+                    <ul className="navbar-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/signin">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+
                     {checkUser ? (
                         <span className="signin" onClick={signOutButton}>
                             Logout

@@ -11,10 +11,10 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: sticky;
     top: 0;
-    box-shadow: 0 14px 28px rgb(0 0 0 / 25%);
+    box-shadow: 0 14px 28px rgb(0 0 0 / 5%);
     background-color: #fff;
+    padding: 1% 0;
 }
 header .logo {
     width: 70%;
@@ -25,8 +25,8 @@ header .logo img {
 }
 header nav {
     display: flex;
-    justify-content: space-around;
-    width: 10%;
+    justify-content: space-between;
+    /* width: 10%; */
 }
 .text {
     position: absolute;
@@ -42,10 +42,39 @@ header nav {
 hr {
     border: 2px solid black;
 }
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: 0 5%;
+  }
+  
+  .navbar-links li {
+    margin-right: 1rem;
+    
+  }
+  
+  .navbar-links li:last-child {
+    margin-right: 0;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  a.signin {
+    margin: 0 5%;
+  }
+
+  
 /***************************
 ****Media Screen
 ****************************/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     header .logo {
         width: 50%;
     }
@@ -62,7 +91,7 @@ hr {
         top: 15%;
     }
 }
-@media screen and (max-width: 750px) and (min-width: 501px) {
+@media screen and (max-width: 768px) and (min-width: 480px) {
     header .logo img {
         width: 15%;
     }
@@ -80,7 +109,7 @@ hr {
         font-size: 30px;
     }
 }
-@media screen and (max-width: 1200px) and (min-width: 751px) {
+@media screen and (max-width: 1200px) and (min-width: 768px) {
     header .logo img {
         width: 15%;
     }
@@ -98,12 +127,31 @@ hr {
         font-size: 30px;
     }
 }
+
+
 /***************************
 ****Home
 ****************************/
-.main-image img {
-    width: 100%;
+.main-image{
+    text-align: center;
+    margin: 5% 5% 0 5%;
 }
+
+.main-image img {
+    width: 40%;
+}
+
+.shop-btn {
+    margin: 2%;
+}
+
+.shop-now {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
 .heading h2 {
     padding: 10px 50px;
 }
@@ -143,6 +191,7 @@ hr {
     padding: 5px 15px;
     border: 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 #minus {
     padding: 0px 3px;
@@ -153,7 +202,7 @@ hr {
 /***************************
 ****Media Screen
 ****************************/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     .item-container {
         margin: 10px 30px;
     }
@@ -177,15 +226,15 @@ hr {
         width: 85%;
     }
 }
-@media screen and (max-width: 1200px) and (min-width: 751px) {
+@media screen and (max-width: 1200px) and (min-width: 768px) {
     .item-container {
         margin: 10px 30px;
     }
-    .item-container .item-grid {
+    /* .item-container .item-grid {
         grid-template-columns: auto auto auto;
-    }
+    } */
 }
-@media screen and (max-width: 750px) and (min-width: 501px) {
+@media screen and (max-width: 768px) and (min-width: 480px) {
     .item-container {
         margin: 10px 42px;
     }
@@ -225,6 +274,113 @@ hr {
         font-size: 8px;
     }
 }
+
+/***************************
+****Carousel
+****************************/
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .carousel button:first-of-type {
+    left: 20px;
+  }
+  
+  .carousel button:last-of-type {
+    right: 20px;
+  }
+  
+  .carousel button:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    transform: rotate(-135deg);
+    vertical-align: middle;
+    margin-right: 10px;
+    border-color: brown;
+  }
+  
+  .carousel button:last-of-type:before {
+    transform: rotate(45deg);
+    margin-right: 0;
+    margin-left: 10px;
+    border-color: brown;
+  }
+  
+  .carousel button.arrow-next:before {
+    transform: rotate(45deg);
+  }
+  
+  .carousel button.arrow-prev:before {
+    transform: rotate(-135deg);
+  }
+  
+  .carousel img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+/***************************
+****Carousel
+****************************/
+
+.categories{
+    display: flex;
+    margin-top: 4%;
+}
+
+.one-img{
+    height: 77vh;
+}
+
+.two {
+    width: 40%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-2{
+    margin-bottom: 5%;
+}
+  
+.product-list{
+    text-align: center;
+    margin: 3%;
+    text-decoration: underline;
+}
+
+
+
+
+element.style {
+    text-align: center;
+    margin: 3%;
+    text-decoration: underline;
+}
+  
+
 /******************************
 *******Footer
 *******************************/
@@ -266,7 +422,7 @@ hr {
 /******************************
 *******Media screen
 *******************************/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
     .refresh p {
         font-size: 10px;
     }
@@ -327,7 +483,7 @@ button.number {
 /******************************
 *******Media Screen
 *******************************/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     .images {
         margin: 10px 10px;
     }
@@ -425,7 +581,7 @@ button.number {
 /******************************
 *******Media Screen
 *******************************/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     .box {
         height: 150px;
     }
@@ -443,7 +599,7 @@ button.number {
         width: 100%;
     }
 }
-@media screen and (min-width:501px) and (max-width: 750px) {
+@media screen and (min-width:480px) and (max-width: 768px) {
     .box {
         height: 150px;
     }
@@ -461,7 +617,7 @@ button.number {
         width: 100%;
     }
 }
-@media screen and (min-width:751px) and (max-width: 1200px) {
+@media screen and (min-width:768px) and (max-width: 1200px) {
     .box {
         height: 150px;
     }
@@ -567,7 +723,7 @@ button.number {
     color: #000;
     text-decoration: none;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     .gradient {
         height: 1000px;
     }
@@ -601,7 +757,7 @@ button.number {
     }
     
 }
-@media screen and (min-width: 501px) and (max-width: 750px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
     .gradient {
         height: 1200px;
     }
@@ -635,7 +791,7 @@ button.number {
     }
    
 }
-@media screen and (min-width:751px) and (max-width: 1200px) {
+@media screen and (min-width:768px) and (max-width: 1200px) {
     .gradient {
         height: 1500px;
     }

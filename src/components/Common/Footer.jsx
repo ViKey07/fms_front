@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo2 from '../../assets/img/cooltees-logo-big.png';
+// import logo2 from '../../assets/img/cooltees-logo-big.png';
 
 export default function Footer({ price }) {
     let pageUrl = window.location.toString();
@@ -28,7 +28,7 @@ export default function Footer({ price }) {
                     )}
                 </div>
             )}
-            <div class="refresh">
+            {/* <div class="refresh">
                 <img src={logo2} alt="logo" />
                 <p>
                     Premium Quality cool t-shirts, 3D designs, with wide range of colors at the best and most affordable
@@ -40,7 +40,7 @@ export default function Footer({ price }) {
             </div>
             <div className="copyright">
                 <p>DESIGN BY COOLTEES - © 2022. ALL RIGHTS RESERVED.</p>
-            </div>
+            </div> */}
         </footer>
     );
 }

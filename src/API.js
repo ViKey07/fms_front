@@ -182,7 +182,7 @@ export default class API {
             .catch(error => {
                 throw new Error(error);
             });
-        return posts;
+        return posts.results;
     };
 
     addPost = async (name, body, image) => {

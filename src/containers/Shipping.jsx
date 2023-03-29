@@ -5,7 +5,7 @@ import { getCarts, getSubtotal } from '../reducks/carts/selectors';
 import { fetchCarts } from '../reducks/carts/operations';
 import { addOrder } from '../reducks/order/operations';
 import { push } from 'connected-react-router';
-import logo from '../assets/img/cooltees-logo.png';
+// import logo from '../assets/img/cooltees-logo.png';
 const api = new API();
 
 const Shipping = () => {
@@ -30,7 +30,7 @@ const Shipping = () => {
 
     useEffect(() => {
         let arr = [];
-        if (carts != undefined && carts.length > 0) {
+        if (carts !== undefined && carts.length > 0) {
             for (let key in carts) {
                 arr.push(carts[key].quantity);
             }
